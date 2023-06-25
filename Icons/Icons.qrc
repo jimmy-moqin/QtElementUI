@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="System">
+    <file>Search.svg</file>
+    <file>plus.svg</file>
+  </qresource>
+  <qresource prefix="Food">
+    <file>Orange.svg</file>
+  </qresource>
+  <qresource prefix="Traffic">
+    <file>OfficeBuilding.svg</file>
+  </qresource>
+  <qresource prefix="Media">
+    <file>Microphone.svg</file>
+  </qresource>
+  <qresource prefix="Arrow">
+    <file>Expand.svg</file>
+  </qresource>
+  <qresource prefix="Document">
+    <file>FolderOpened.svg</file>
+  </qresource>
+</RCC>

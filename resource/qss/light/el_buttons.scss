@@ -1,0 +1,387 @@
+// HOW TO import common.scss
+
+@import ".\\resource\\qss\\light\\common.scss";
+
+
+.ElButton[type="default"]{
+    background-color: $--color-white;
+    border: 1px solid $--border-color-base;
+    border-radius: $--border-radius-base;
+    color: $--color-text-regular;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        background-color: $--color-primary-light-9;
+        border: 1px solid $--color-primary-light-7;
+        color: $--color-primary;
+    }
+    &:pressed{
+        border-color: $--color-primary;
+    }
+    &:disabled{
+        background-color: $--color-white;
+        border: 1px solid $--button-disabled-border-color;
+        color: $--button-disabled-text-color;
+    }
+}
+
+.ElButton[type="primary"]{
+    background-color: $--color-primary;
+    border: 1px solid $--color-primary;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        background-color: $--color-primary-light-3;
+        border: 1px solid $--color-primary-light-3;
+        color: $--color-white;
+    }
+    &:pressed{
+        background-color: $--color-primary-dark-2;
+        border: 1px solid $--color-primary-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-primary-light-5;
+        border: 1px solid $--color-primary-light-5;
+        color: $--color-white;
+    }
+}
+
+.ElButton[type="success"]{
+    background-color: $--color-success;
+    border: 1px solid $--color-success;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        background-color: $--color-success-light-3;
+        border: 1px solid $--color-success-light-3;
+        color: $--color-white;
+    }
+    &:pressed{
+        background-color: $--color-success-dark-2;
+        border: 1px solid $--color-success-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-success-light-5;
+        border: 1px solid $--color-success-light-5;
+        color: $--color-white;
+    }
+}
+
+.ElButton[type="warning"]{
+    background-color: $--color-warning;
+    border: 1px solid $--color-warning;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        background-color: $--color-warning-light-3;
+        border: 1px solid $--color-warning-light-3;
+        color: $--color-white;
+    }
+    &:pressed{
+        background-color: $--color-warning-dark-2;
+        border: 1px solid $--color-warning-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-warning-light-5;
+        border: 1px solid $--color-warning-light-5;
+        color: $--color-white;
+    }
+}
+
+.ElButton[type="danger"]{
+    background-color: $--color-danger;
+    border: 1px solid $--color-danger;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        background-color: $--color-danger-light-3;
+        border: 1px solid $--color-danger-light-3;
+        color: $--color-white;
+    }
+    &:pressed{
+        background-color: $--color-danger-dark-2;
+        border: 1px solid $--color-danger-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-danger-light-5;
+        border: 1px solid $--color-danger-light-5;
+        color: $--color-white;
+    }
+}
+
+.ElButton[type="info"]{
+    background-color: $--color-info;
+    border: 1px solid $--color-info;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        background-color: $--color-info-light-3;
+        border: 1px solid $--color-info-light-3;
+        color: $--color-white;
+    }
+    &:pressed{
+        background-color: $--color-info-dark-2;
+        border: 1px solid $--color-info-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-info-light-5;
+        border: 1px solid $--color-info-light-5;
+        color: $--color-white;
+    }
+}
+
+
+.ElButton[type="default"][plain="true"]{
+    background-color: $--color-white;
+    border: 1px solid $--border-color-base;
+    border-radius: $--border-radius-base;
+    color: $--color-text-regular;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: 1px solid $--color-primary;
+        color: $--color-primary;
+    }
+    &:disabled{
+        background-color: $--color-white;
+        border: 1px solid $--button-disabled-border-color;
+        color: $--button-disabled-text-color;
+    }
+}
+
+.ElButton[type="primary"][plain="true"]{
+    background-color: $--color-primary-light-9;
+    border: 1px solid $--color-primary-light-5;
+    border-radius: $--border-radius-base;
+    color: $--color-primary;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: 1px solid $--color-primary;
+        color: $--color-white;
+        background-color: $--color-primary;
+    }
+    &:pressed{
+        background-color: $--color-primary-dark-2;
+        border: 1px solid $--color-primary-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-primary-light-9;
+        border: 1px solid $--color-primary-light-8;
+        color: $--color-primary-light-5;
+    }
+}
+
+.ElButton[type="success"][plain="true"]{
+    background-color: $--color-success-light-9;
+    border: 1px solid $--color-success-light-5;
+    border-radius: $--border-radius-base;
+    color: $--color-success;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: 1px solid $--color-success;
+        color: $--color-white;
+        background-color: $--color-success;
+    }
+    &:pressed{
+        background-color: $--color-success-dark-2;
+        border: 1px solid $--color-success-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-success-light-9;
+        border: 1px solid $--color-success-light-8;
+        color: $--color-success-light-5;
+    }
+}
+
+.ElButton[type="warning"][plain="true"]{
+    background-color: $--color-warning-light-9;
+    border: 1px solid $--color-warning-light-5;
+    border-radius: $--border-radius-base;
+    color: $--color-warning;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: 1px solid $--color-warning;
+        color: $--color-white;
+        background-color: $--color-warning;
+    }
+    &:pressed{
+        background-color: $--color-warning-dark-2;
+        border: 1px solid $--color-warning-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-warning-light-9;
+        border: 1px solid $--color-warning-light-8;
+        color: $--color-warning-light-5;
+    }
+}
+
+.ElButton[type="danger"][plain="true"]{
+    background-color: $--color-danger-light-9;
+    border: 1px solid $--color-danger-light-5;
+    border-radius: $--border-radius-base;
+    color: $--color-danger;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: 1px solid $--color-danger;
+        color: $--color-white;
+        background-color: $--color-danger;
+    }
+    &:pressed{
+        background-color: $--color-danger-dark-2;
+        border: 1px solid $--color-danger-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-danger-light-9;
+        border: 1px solid $--color-danger-light-8;
+        color: $--color-danger-light-5;
+    }
+}
+
+.ElButton[type="info"][plain="true"]{
+    background-color: $--color-info-light-9;
+    border: 1px solid $--color-info-light-5;
+    border-radius: $--border-radius-base;
+    color: $--color-info;
+    font-size: $--font-size-large;
+    font-weight: $--font-weight-base;
+    font-family: $--yahei;
+    line-height: $--font-line-height-primary;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: 1px solid $--color-info;
+        color: $--color-white;
+        background-color: $--color-info;
+    }
+    &:pressed{
+        background-color: $--color-info-dark-2;
+        border: 1px solid $--color-info-dark-2;
+    }
+    &:disabled{
+        background-color: $--color-info-light-9;
+        border: 1px solid $--color-info-light-8;
+        color: $--color-info-light-5;
+    }
+}
+
+
+
+
+
+
+
+.ElButton[size_="large"]{
+    font-size: $--font-size-large;
+    padding: $--padding-large;
+    qproperty-iconSize: 24px 24px;
+}
+
+.ElButton[size_="default"]{
+    font-size: $--font-size-base;
+    qproperty-iconSize: 20px 20px;
+}
+
+.ElButton[size_="small"]{
+    font-size: $--font-size-small;
+    padding: $--padding-small;
+    qproperty-iconSize: 14px 14px;
+}
+
+.ElButton[circle="true"][size_="default"]{
+    padding: 8px 6px;
+}
+
+.ElButton[circle="true"][size_="large"]{
+    padding: 12px 10px;
+}
+
+.ElButton[circle="true"][size_="small"]{
+    padding: 4px 2px;
+}
+
+.ElButton[size_="large"][plain="true"]{
+    font-size: $--font-size-large;
+    padding: $--padding-large;
+    qproperty-iconSize: 24px 24px;
+}
+
+.ElButton[size_="default"][plain="true"]{
+    font-size: $--font-size-base;
+    qproperty-iconSize: 20px 20px;
+}
+
+.ElButton[size_="small"][plain="true"]{
+    font-size: $--font-size-small;
+    padding: $--padding-small;
+    qproperty-iconSize: 16px 16px;
+}

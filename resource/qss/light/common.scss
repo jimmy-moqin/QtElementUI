@@ -1,0 +1,262 @@
+// 主色
+$--color-primary: #409EFF !default;
+// 辅助色
+$--color-success: #67C23A !default;
+$--color-warning: #E6A23C !default;
+$--color-danger: #F56C6C !default;
+$--color-info: #909399 !default;
+$--color-white: #fff !default;
+$--color-black: #000 !default;
+
+// 调色
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
+
+$--color-primary-dark-1: mix($--color-black, $--color-primary, 10%) !default;
+$--color-primary-dark-2: mix($--color-black, $--color-primary, 20%) !default;
+$--color-primary-dark-3: mix($--color-black, $--color-primary, 30%) !default;
+$--color-primary-dark-4: mix($--color-black, $--color-primary, 40%) !default;
+$--color-primary-dark-5: mix($--color-black, $--color-primary, 50%) !default;
+$--color-primary-dark-6: mix($--color-black, $--color-primary, 60%) !default;
+$--color-primary-dark-7: mix($--color-black, $--color-primary, 70%) !default;
+$--color-primary-dark-8: mix($--color-black, $--color-primary, 80%) !default;
+$--color-primary-dark-9: mix($--color-black, $--color-primary, 90%) !default;
+
+// Lighter shades of success color
+$--color-success-light-1: mix($--color-white, $--color-success, 10%) !default;
+$--color-success-light-2: mix($--color-white, $--color-success, 20%) !default;
+$--color-success-light-3: mix($--color-white, $--color-success, 30%) !default;
+$--color-success-light-4: mix($--color-white, $--color-success, 40%) !default;
+$--color-success-light-5: mix($--color-white, $--color-success, 50%) !default;
+$--color-success-light-6: mix($--color-white, $--color-success, 60%) !default;
+$--color-success-light-7: mix($--color-white, $--color-success, 70%) !default;
+$--color-success-light-8: mix($--color-white, $--color-success, 80%) !default;
+$--color-success-light-9: mix($--color-white, $--color-success, 90%) !default;
+
+$--color-success-dark-1: mix($--color-black, $--color-success, 10%) !default;
+$--color-success-dark-2: mix($--color-black, $--color-success, 20%) !default;
+$--color-success-dark-3: mix($--color-black, $--color-success, 30%) !default;
+$--color-success-dark-4: mix($--color-black, $--color-success, 40%) !default;
+$--color-success-dark-5: mix($--color-black, $--color-success, 50%) !default;
+$--color-success-dark-6: mix($--color-black, $--color-success, 60%) !default;
+$--color-success-dark-7: mix($--color-black, $--color-success, 70%) !default;
+$--color-success-dark-8: mix($--color-black, $--color-success, 80%) !default;
+$--color-success-dark-9: mix($--color-black, $--color-success, 90%) !default;
+
+// Lighter shades of warning color
+$--color-warning-light-1: mix($--color-white, $--color-warning, 10%) !default;
+$--color-warning-light-2: mix($--color-white, $--color-warning, 20%) !default;
+$--color-warning-light-3: mix($--color-white, $--color-warning, 30%) !default;
+$--color-warning-light-4: mix($--color-white, $--color-warning, 40%) !default;
+$--color-warning-light-5: mix($--color-white, $--color-warning, 50%) !default;
+$--color-warning-light-6: mix($--color-white, $--color-warning, 60%) !default;
+$--color-warning-light-7: mix($--color-white, $--color-warning, 70%) !default;
+$--color-warning-light-8: mix($--color-white, $--color-warning, 80%) !default;
+$--color-warning-light-9: mix($--color-white, $--color-warning, 90%) !default;
+
+$--color-warning-dark-1: mix($--color-black, $--color-warning, 10%) !default;
+$--color-warning-dark-2: mix($--color-black, $--color-warning, 20%) !default;
+$--color-warning-dark-3: mix($--color-black, $--color-warning, 30%) !default;
+$--color-warning-dark-4: mix($--color-black, $--color-warning, 40%) !default;
+$--color-warning-dark-5: mix($--color-black, $--color-warning, 50%) !default;
+$--color-warning-dark-6: mix($--color-black, $--color-warning, 60%) !default;
+$--color-warning-dark-7: mix($--color-black, $--color-warning, 70%) !default;
+$--color-warning-dark-8: mix($--color-black, $--color-warning, 80%) !default;
+$--color-warning-dark-9: mix($--color-black, $--color-warning, 90%) !default;
+
+// Lighter shades of danger color
+$--color-danger-light-1: mix($--color-white, $--color-danger, 10%) !default;
+$--color-danger-light-2: mix($--color-white, $--color-danger, 20%) !default;
+$--color-danger-light-3: mix($--color-white, $--color-danger, 30%) !default;
+$--color-danger-light-4: mix($--color-white, $--color-danger, 40%) !default;
+$--color-danger-light-5: mix($--color-white, $--color-danger, 50%) !default;
+$--color-danger-light-6: mix($--color-white, $--color-danger, 60%) !default;
+$--color-danger-light-7: mix($--color-white, $--color-danger, 70%) !default;
+$--color-danger-light-8: mix($--color-white, $--color-danger, 80%) !default;
+$--color-danger-light-9: mix($--color-white, $--color-danger, 90%) !default;
+
+$--color-danger-dark-1: mix($--color-black, $--color-danger, 10%) !default;
+$--color-danger-dark-2: mix($--color-black, $--color-danger, 20%) !default;
+$--color-danger-dark-3: mix($--color-black, $--color-danger, 30%) !default;
+$--color-danger-dark-4: mix($--color-black, $--color-danger, 40%) !default;
+$--color-danger-dark-5: mix($--color-black, $--color-danger, 50%) !default;
+$--color-danger-dark-6: mix($--color-black, $--color-danger, 60%) !default;
+$--color-danger-dark-7: mix($--color-black, $--color-danger, 70%) !default;
+$--color-danger-dark-8: mix($--color-black, $--color-danger, 80%) !default;
+$--color-danger-dark-9: mix($--color-black, $--color-danger, 90%) !default;
+
+// Lighter shades of info color
+$--color-info-light-1: mix($--color-white, $--color-info, 10%) !default;
+$--color-info-light-2: mix($--color-white, $--color-info, 20%) !default;
+$--color-info-light-3: mix($--color-white, $--color-info, 30%) !default;
+$--color-info-light-4: mix($--color-white, $--color-info, 40%) !default;
+$--color-info-light-5: mix($--color-white, $--color-info, 50%) !default;
+$--color-info-light-6: mix($--color-white, $--color-info, 60%) !default;
+$--color-info-light-7: mix($--color-white, $--color-info, 70%) !default;
+$--color-info-light-8: mix($--color-white, $--color-info, 80%) !default;
+$--color-info-light-9: mix($--color-white, $--color-info, 90%) !default;
+
+$--color-info-dark-1: mix($--color-black, $--color-info, 10%) !default;
+$--color-info-dark-2: mix($--color-black, $--color-info, 20%) !default;
+$--color-info-dark-3: mix($--color-black, $--color-info, 30%) !default;
+$--color-info-dark-4: mix($--color-black, $--color-info, 40%) !default;
+$--color-info-dark-5: mix($--color-black, $--color-info, 50%) !default;
+$--color-info-dark-6: mix($--color-black, $--color-info, 60%) !default;
+$--color-info-dark-7: mix($--color-black, $--color-info, 70%) !default;
+$--color-info-dark-8: mix($--color-black, $--color-info, 80%) !default;
+$--color-info-dark-9: mix($--color-black, $--color-info, 90%) !default;
+
+
+
+// 文本颜色
+/// color|1|Font Color|2
+$--color-text-primary: #303133 !default;
+/// color|1|Font Color|2
+$--color-text-regular: #606266 !default;
+/// color|1|Font Color|2
+$--color-text-secondary: #909399 !default;
+/// color|1|Font Color|2
+$--color-text-placeholder: #C0C4CC !default;
+
+$--button-disabled-text-color: #a8abb2 !default;
+
+// 边框颜色
+/// color|1|Border Color|3
+$--border-color-base: #DCDFE6 !default;
+/// color|1|Border Color|3
+$--border-color-light: #E4E7ED !default;
+/// color|1|Border Color|3
+$--border-color-lighter: #EBEEF5 !default;
+/// color|1|Border Color|3
+$--border-color-extra-light: #F2F6FC !default;
+
+$--button-disabled-border-color: #e4e7ed !default;
+
+// 背景色
+/// color|1|Background Color|4
+$--color-black: #000000 !default;
+/// color|1|Background Color|4
+$--color-white: #FFFFFF !default;
+/// color|1|Background Color|4
+$--background-color-base: #F5F7FA !default;
+
+
+// 字号
+/// fontSize|1|Font Size|0
+$--font-size-extra-large: 24px !default;
+/// fontSize|1|Font Size|0
+$--font-size-large: 20px !default;
+/// fontSize|1|Font Size|0
+// $--font-size-medium: 16px !default;
+/// fontSize|1|Font Size|0
+$--font-size-base: 16px !default;
+/// fontSize|1|Font Size|0
+$--font-size-small: 14px !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-small: 12px !default;
+
+// 字重
+$--font-weight-base: 400 !default;
+$--font-weight-medium: 500 !default;
+$--font-weight-bold: 600 !default;
+
+// 字体
+$--yahei: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// $souce-sans-pro: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+
+// 行高
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-primary: 24px !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-secondary: 16px !default;
+
+// 宽高
+$--height-base: 32px !default;
+$--height-large: 40px !default;
+$--height-small: 24px !default;
+
+$--width-base: 64px !default;
+$--width-large: 80px !default;
+$--width-small: 48px !default;
+
+// padding
+$--padding-base: 8px 15px !default;
+$--padding-large: 12px 20px !default;
+$--padding-small: 4px 10px !default;
+
+
+// 圆角
+/// color|1|Border Color|3
+$--border-color-base: #DCDFE6 !default;
+/// color|1|Border Color|3
+$--border-color-light: #E4E7ED !default;
+/// color|1|Border Color|3
+$--border-color-lighter: #EBEEF5 !default;
+/// color|1|Border Color|3
+$--border-color-extra-light: #F2F6FC !default;
+
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-color-hover: $--color-text-placeholder  !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base  !default;
+/// borderRadius|1|Radius|0
+$--border-radius-base: 4px !default;
+/// borderRadius|1|Radius|0
+$--border-radius-small: 2px !default;
+/// borderRadius|1|Radius|0
+$--border-radius-circle: 100% !default;
+/// borderRadius|1|Radius|0
+$--border-radius-zero: 0 !default;
+
+$--border-radius-round: 8px !default;
+
+
+// 阴影
+/// boxShadow|1|Shadow|1
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+// boxShadow|1|Shadow|1
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+/// boxShadow|1|Shadow|1
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+
+#MainWidget { background-color: #FFFFFF; }
+#scrollArea_2 {border:none }
+.QScrollBar {
+    width: 10px;
+    background-color: transparent;
+    margin: 0px 0px 0px 0px;
+}
+
+.QScrollBar::handle {
+    background: #CCCCCC;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 0px;
+}
+
+.QScrollBar::sub-page {
+    background: transparent;
+    border-radius: 4px;
+}
+
+.QScrollBar::add-page {
+    background: transparent;
+    border-radius: 4px;
+}
+
+.QScrollBar::sub-line {
+    border: none;
+}
+
+.QScrollBar::add-line {
+    border: none;
+}

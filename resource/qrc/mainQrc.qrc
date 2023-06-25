@@ -1,0 +1,41 @@
+<RCC>
+  <qresource prefix="dark">
+    <file>../img/order-editor.png</file>
+    <file>../img/qe.png</file>
+    <file>../img/scss.png</file>
+    <file>../img/close.png</file>
+    <file>../img/document.png</file>
+    <file>../img/document_blue.png</file>
+    <file>../img/document_white.png</file>
+    <file>../img/github.png</file>
+    <file>../img/github_blue.png</file>
+    <file>../img/github_white.png</file>
+    <file>../img/history.png</file>
+    <file>../img/history_blue.png</file>
+    <file>../img/history_white.png</file>
+    <file>../img/image.png</file>
+    <file>../img/image_blue.png</file>
+    <file>../img/image_white.png</file>
+    <file>../img/logo.png</file>
+    <file>../img/max.png</file>
+    <file>../img/min.png</file>
+    <file>../img/new_project.png</file>
+    <file>../img/open_project.png</file>
+    <file>../img/process.png</file>
+    <file>../img/process_blue.png</file>
+    <file>../img/process_white.png</file>
+    <file>../img/resize.png</file>
+    <file>../img/search.png</file>
+    <file>../img/search_blue.png</file>
+    <file>../img/search_white.png</file>
+    <file>../img/setting.png</file>
+    <file>../img/setting_blue.png</file>
+    <file>../img/setting_white.png</file>
+    <file>../img/table.png</file>
+    <file>../img/table_blue.png</file>
+    <file>../img/table_white.png</file>
+    <file>../img/todo.png</file>
+    <file>../img/todo_blue.png</file>
+    <file>../img/todo_white.png</file>
+  </qresource>
+</RCC>
