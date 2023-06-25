@@ -17,42 +17,25 @@ class LevelDelegate(QStyledItemDelegate):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.first_level_offset = (0, 0, 0, 0)
-        self.second_level_offset = (20, 0, 0, 0)
-        self.third_level_offset = (40, 0, 0, 0)
+        self.parent = parent
 
-        self.item_background_color = QColor(0, 0, 0, 0)
-        self.item_border_radius = 5
-
-        self.item_background_offset = (0, 0, 0, 0)
+        
 
     def paint(self, painter, option, index):
-        level = index.data(Qt.UserRole)  # 获取项的level属性值
+        # 转换到父控件坐标系,获取项的左边距
+        left_offset = self.parent.mapToParent(option.rect.topLeft()).x()
 
+        level = index.data(Qt.UserRole)  # 获取项的level属性值
+        
         if level == "1":
-            # 绘制文字
-            option.rect.adjust(*self.first_level_offset)
+            # 绘制文字,左边距减去偏移量,从而保证level为1的项的文字顶格
+            # 而level为2和3的项的文字会缩进padding的距离，而且background-color不会缩进
+            option.rect.setLeft(option.rect.left()-left_offset)
             super().paint(painter, option, index)
         elif level == "2":
-
-            selected = option.state & QStyle.State_Selected
-            hovered = option.state & QStyle.State_MouseOver
-            if selected:
-                # 绘制圆角矩形背景
-                painter.setPen(Qt.NoPen)
-                painter.setBrush(self.item_background_color)
-                painter.drawRoundedRect(option.rect, self.item_border_radius, self.item_border_radius)
-
-            text_rect = option.rect
-            text_rect.adjust(*self.second_level_offset)  # 向右偏移20像素
             super().paint(painter, option, index)
 
         elif level == "3":
-            # 在距左侧40像素的位置绘制文字
-            option.rect.adjust(*self.third_level_offset)
-            super().paint(painter, option, index)
-        else:
-            # 默认绘制样式
             super().paint(painter, option, index)
 
 
@@ -107,19 +90,4 @@ class ElListWidget(QListWidget):
 
         self.update()
 
-    def setItemBackgroundColor(self, color: QColor):
-        self.delegate.item_background_color = color
-
-    def setItemBorderRadius(self, num):
-        self.delegate.item_border_radius = num
-
-    def setItemBackgroundOffset(self, offset):
-        self.delegate.item_background_offset = offset
-
-    def setLevelOffset(self, level, offset):
-        if level == "1":
-            self.delegate.first_level_offset = offset
-        elif level == "2":
-            self.delegate.second_level_offset = offset
-        elif level == "3":
-            self.delegate.third_level_offset = offset
+    

@@ -8,7 +8,6 @@ from PyQt5.QtWidgets import QWidget
 from ui.Main_ui import Ui_MainWidget
 
 
-
 class MainWidgetLogic(QWidget, Ui_MainWidget):
 
     def __init__(self):
@@ -223,14 +222,15 @@ class MainWidgetLogic(QWidget, Ui_MainWidget):
         firstItemFont.setFamily("Microsoft YaHei")
         firstItemFont.setPointSize(14)
         firstItemFont.setBold(True)
-        self.leftListWidget.addItem("Basic基础组件",level="1",first_style=firstItemFont)
-        # QListWidgetItem("Button按钮",self.leftListWidget,level="2")
-        self.leftListWidget.addItem("Button按钮",level="2")
-        self.leftListWidget.addItem("Item 3",level="2")
-        self.leftListWidget.addItem("Item 4",level="2")
+        self.leftListWidget.addItem("Basic 基础组件",level="1",first_style=firstItemFont)
+        self.leftListWidget.addItem("Button 按钮",level="2")
+        self.leftListWidget.addItem("Border 边框",level="2")
+        self.leftListWidget.addItem("Color 色彩",level="2")
+        self.leftListWidget.addItem("Container 布局容器",level="2")
+        self.leftListWidget.addItem("Icon 图标",level="2")
+        self.leftListWidget.addItem("Layout 布局",level="2")
+        self.leftListWidget.addItem("Link 链接",level="2")
 
-        self.leftListWidget.setItemBackgroundColor(QColor(236,245,255))
-        self.leftListWidget.setItemBorderRadius(8)
 
 
     '''Logic Func below'''

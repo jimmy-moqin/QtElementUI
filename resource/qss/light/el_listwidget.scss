@@ -7,20 +7,19 @@
     font-size: $--font-size-base;
     font-family: $--yahei;
     outline: 0px;
+    
     &::item {
         color: $--color-text-primary;
         font-size: $--font-size-large;
-        height: 2em;
+        height: 2.5em;
         border-radius: $--border-radius-round;
-        // padding-left: $--padding-large;
-        
+        padding-left: $--padding-large;
         &:hover{
             color:$--color-primary;
-            // background-color: $--color-white;
         }
         &:selected {
-            // background-color: $--color-primary-light-9;
             color: $--color-primary;
+            background-color: $--color-primary-light-9;
         }  
     }
 
