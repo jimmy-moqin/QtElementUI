@@ -10,14 +10,14 @@ ps：组件命名与ElementUI风格一致，例如ElButton、ElInput等
 一下是目前已经做好的几种组件
 1. **ElButton**
 
-    ![button_show](H:\QtElementUI\resource\img\button_show.png)
+    <img src=".\resource\img\button_show.png" alt="catalog_show" style="zoom:67%;" />
 
 2. **ElCatalog**
 
-    <img src="H:\QtElementUI\resource\img\catalog_show.png" alt="catalog_show" style="zoom:67%;" />
+    <img src=".\resource\img\catalog_show.png" alt="catalog_show" style="zoom:67%;" />
 
 3. **ElInput**
 
-    ![input_show](H:\QtElementUI\resource\img\input_show.png)
+    <img src=".\resource\img\input_show.png" alt="catalog_show" style="zoom:67%;" />
 ## 鸣谢
 感谢zhiyiYo的[PyQt Fluent UI](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)优秀项目，给了我开发本项目的启发与技术参考，请给他Star！
