@@ -14,14 +14,14 @@ ps: the components are named in the same style as ElementUI, e.g. ElButton, ElIn
 Here are a few of the components that have been done so far
 1. **ElButton**
 
-    ![button_show](H:\QtElementUI\resource\img\button_show.png)
+    ![button_show](.\resource\img\button_show.png)
 
 2. **ElCatalog**
 
-    <img src="H:\QtElementUI\resource\img\catalog_show.png" alt="catalog_show" style="zoom:67%;" />
+    <img src=".\resource\img\catalog_show.png" alt="catalog_show" style="zoom:67%;" />
 
 3. **ElInput**
 
-    ![input_show](H:\QtElementUI\resource\img\input_show.png)
+    ![input_show](.\resource\img\input_show.png)
 ## Acknowledgements
 Thanks to zhiyiYo's [PyQt Fluent UI](https://github.com/zhiyiYo/PyQt-Fluent-Widgets) excellent project that gave me inspiration and technical reference to develop this project, please give him Star!
