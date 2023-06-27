@@ -61,6 +61,7 @@ class ElButton(ElBaseButton):
         self.is_plain = False
         self.is_disabled = False
         self.is_circle = False
+        self.is_text = False
 
         self.setType(Type.DEFAULT)
         self.setSize(Size.DEFAULT)
@@ -191,3 +192,15 @@ class ElButton(ElBaseButton):
                 self.style().polish(self)
         else:
             raise TypeError("is_disabled must be an instance of bool")
+    
+    def isText(self, is_text: bool):
+        if isinstance(is_text, bool):
+            self.is_text = is_text
+            if self.is_text:
+                self.setProperty("_text", "true")
+                self.style().polish(self)
+            else:
+                self.setProperty("_text", "false")
+                self.style().polish(self)
+        else:
+            raise TypeError("is_text must be an instance of bool")

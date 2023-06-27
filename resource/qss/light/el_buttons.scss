@@ -334,6 +334,50 @@
     }
 }
 
+.ElButton[type="default"][_text="true"]{
+    background-color: $--color-white;
+    border: none;
+    border-radius: $--border-radius-base;
+    color: $--color-text-regular;
+    font-size: $--font-size-large;
+    font-family: $--yahei;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: none;
+        background-color: $--fill-color-light;
+    }
+    &:pressed{
+        background-color: $--fill-color-light-pressed;
+    }
+    &:disabled{
+        color: $--color-text-placeholder;
+    }
+}
+
+.ElButton[type="primary"][_text="true"]{
+    background-color: $--color-white;
+    border: none;
+    border-radius: $--border-radius-base;
+    color: $--color-primary;
+    font-size: $--font-size-large;
+    font-family: $--yahei;
+    
+    padding: $--padding-base;
+    // hover
+    &:hover{
+        border: none;
+        background-color: $--fill-color-light;
+    }
+    &:pressed{
+        background-color: $--fill-color-light-pressed;
+    }
+    &:disabled{
+        color: $--color-primary-light-7;
+    }
+}
+
 
 
 

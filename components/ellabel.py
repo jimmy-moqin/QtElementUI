@@ -12,21 +12,51 @@ from .common.common_enums import Size, Type
 
 
 class ElLabel(QLabel):
+    clicked = pyqtSignal()
     def __init__(self, parent: QWidget = None):
         super().__init__(parent)
+        
         self.is_clickable = False
-        self.is_bold = False
+        self.type = Type.DEFAULT
+        self.is_round = False
+        self.is_plain = False
+        
+    def setClickable(self, is_clickable: bool):
+        self.is_clickable = is_clickable
 
-    def isBold(self, isBold: bool):
-        self.is_bold = isBold
-        if isBold:
-            font = self.font()
-            font.setWeight(QFont.Bold)
-            self.setFont(font)
-        else:
-            font = self.font()
-            font.setWeight(QFont.Normal)
-            self.setFont(font)
+    def mousePressEvent(self, event):
+        if self.is_clickable:
+            self.clicked.emit()
+        super().mousePressEvent(event)
+
+    def setPixmapSize(self, size: QSize):
+        self.setFixedSize(size)
+        self.adjustPixmapSize()
+
+    def adjustPixmapSize(self):
+        if self.pixmap():
+            scaledPixmap = self.pixmap().scaled(self.size(), aspectRatioMode=Qt.KeepAspectRatio, transformMode=Qt.SmoothTransformation)
+            self.setPixmap(scaledPixmap)
+
+    def setType(self,t:Type):
+        if t == Type.PRIMARY:
+            self.setProperty("type", "primary")
+        elif t == Type.SUCCESS:
+            self.setProperty("type", "success")
+        elif t == Type.WARNING:
+            self.setProperty("type", "warning")
+        elif t == Type.DANGER:
+            self.setProperty("type", "danger")
+        elif t == Type.INFO:
+            self.setProperty("type", "info")
+        elif t == Type.DEFAULT:
+            self.setProperty("type", "default")
         self.style().polish(self)
 
-
+    def isPlain(self, is_plain: bool):
+        self.is_plain = is_plain
+        if is_plain:
+            self.setProperty("plain", "true")
+        else:
+            self.setProperty("plain", "false")
+        self.style().polish(self)

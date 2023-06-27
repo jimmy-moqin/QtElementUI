@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>928</width>
+    <width>1138</width>
     <height>719</height>
    </rect>
   </property>
@@ -30,23 +30,21 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="ElListWidget" name="leftListWidget"/>
+    <widget class="ElCatalog" name="leftCatalog"/>
    </item>
    <item>
-    <widget class="QStackedWidget" name="previewStackedWidget">
+    <widget class="QStackedWidget" name="StackedWidget">
      <property name="styleSheet">
       <string notr="true">#previewStackedWidget{background-color: rgb(255, 255, 255);}</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="Buttons">
-      <property name="styleSheet">
-       <string notr="true">.QLabel{
-	color:rgb(31, 31, 31);
-}</string>
-      </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -70,9 +68,9 @@
          <widget class="QWidget" name="scrollAreaWidgetContents_5">
           <property name="geometry">
            <rect>
-            <x>-192</x>
+            <x>0</x>
             <y>0</y>
-            <width>826</width>
+            <width>844</width>
             <height>934</height>
            </rect>
           </property>
@@ -859,7 +857,306 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="previewStackedWidgetPage2"/>
+     <widget class="QWidget" name="Catalog">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <family>思源黑体 CN</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Catalog 目录</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <family>思源黑体 CN</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是一个自定义的目录控件, 用于显示简单的2层目录结构;其中level为1的项不可选择,不可点击,为大标题,且字体加粗;level为2的项可选择,可点击,为小标题,且字体不加粗;如果需要显示更多层次的目录结构,建议使用其他控件.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="ElCatalog" name="CatalogExample"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Input">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>-123</y>
+            <width>844</width>
+            <height>840</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#scrollAreaWidgetContents{
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>7</number>
+           </property>
+           <property name="leftMargin">
+            <number>11</number>
+           </property>
+           <property name="topMargin">
+            <number>11</number>
+           </property>
+           <property name="rightMargin">
+            <number>11</number>
+           </property>
+           <property name="bottomMargin">
+            <number>11</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>20</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Input 输入框</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>基础用法</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElInput" name="BasicInput" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>禁用状态</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>通过 disabled 属性指定是否禁用 input 组件</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElInput" name="DisabledInput" native="true"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>一键清空</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用clearable属性即可得到一个可一键清空的输入框。&lt;/p&gt;&lt;p&gt;还可以使用changeClearIcon(&lt;span style=&quot; font-style:italic;&quot;&gt;icon:Qicon&lt;/span&gt;)方法改变清除按钮的图标&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElInput" name="ClearableInput" native="true"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>带图标的输入框</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;带有图标标记输入类型。图标并不是在LineEdit控件内，而是在两侧名叫prefix和suffix的widget内。&lt;/p&gt;&lt;p&gt;当设置的子部件为图标时，可以使用setPrefixIcon(&lt;span style=&quot; font-style:italic;&quot;&gt;icon:Qicon, size:QSize&lt;/span&gt;)或setSuffixIcon(&lt;span style=&quot; font-style:italic;&quot;&gt;icon:Qicon, size:QSize&lt;/span&gt;)来分别设置前后图标。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElInput" name="IconInputLeft" native="true"/>
+           </item>
+           <item>
+            <widget class="ElInput" name="IconInputRight" native="true"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>复合型输入框</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;上述Prefix和Suffix也支持载入自定义子部件。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;使用setPrefixWidget(&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;widget:QWidget&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;)和setSuffixWidget(&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;widget:QWidget&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;),来载入前后的子部件。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElInput" name="ComplexInput_1" native="true"/>
+           </item>
+           <item>
+            <widget class="ElInput" name="ComplexInput_2" native="true"/>
+           </item>
+           <item>
+            <widget class="ElInput" name="ComplexInput_3" native="true"/>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -871,9 +1168,15 @@
    <header>components.elbutton.h</header>
   </customwidget>
   <customwidget>
-   <class>ElListWidget</class>
+   <class>ElCatalog</class>
    <extends>QListWidget</extends>
-   <header>components.ellistwidget.h</header>
+   <header>components.elcatalog.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ElInput</class>
+   <extends>QWidget</extends>
+   <header>components.elinput.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

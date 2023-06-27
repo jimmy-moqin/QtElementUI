@@ -123,7 +123,7 @@ $--color-text-regular: #606266 !default;
 /// color|1|Font Color|2
 $--color-text-secondary: #909399 !default;
 /// color|1|Font Color|2
-$--color-text-placeholder: #C0C4CC !default;
+$--color-text-placeholder: #F5F7FA !default;
 
 $--button-disabled-text-color: #a8abb2 !default;
 
@@ -137,6 +137,8 @@ $--border-color-lighter: #EBEEF5 !default;
 /// color|1|Border Color|3
 $--border-color-extra-light: #F2F6FC !default;
 
+$--border-color-base-hover:#909399 !default;
+
 $--button-disabled-border-color: #e4e7ed !default;
 
 // 背景色
@@ -147,6 +149,8 @@ $--color-white: #FFFFFF !default;
 /// color|1|Background Color|4
 $--background-color-base: #F5F7FA !default;
 
+$--fill-color-light: #F5F7FA !default;
+$--fill-color-light-pressed: #F0F2F5 !default;
 
 // 字号
 /// fontSize|1|Font Size|0
@@ -193,6 +197,10 @@ $--padding-base: 8px 15px !default;
 $--padding-large: 12px 20px !default;
 $--padding-small: 4px 10px !default;
 
+// icons
+$--icon-size-extra-large: 24px !default;
+$--icon-size-large: 20px !default;
+$--icon-size-base: 16px !default;
 
 // 圆角
 /// color|1|Border Color|3
@@ -229,7 +237,8 @@ $--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !de
 $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 
 #MainWidget { background-color: #FFFFFF; }
-#scrollArea_2 {border:none }
+#scrollArea_2{border:none }
+#scrollArea{border:none }
 .QScrollBar {
     width: 10px;
     background-color: transparent;

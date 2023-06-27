@@ -1,0 +1,69 @@
+@import ".\\resource\\qss\\light\\common.scss";
+
+.ElInput {
+    max-height: 42px;
+    min-height: 42px;
+    // padding-left: $--padding-base;
+    // width: 800px;
+}
+
+.ElInput .ElLineEdit {
+    background-color: transparent;
+    border: none;
+    font-size: $--font-size-large;
+    padding-left: $--padding-large;
+    padding-right: $--padding-large;
+    border-radius: $--border-radius-base;
+
+    &:disabled {
+        background-color: $--color-text-placeholder;
+        border-color: $--border-color-base;
+    }
+}
+
+#inputContainer[_focus="false"] {
+    border: 2px solid $--border-color-base;
+    border-radius: $--border-radius-base;
+    background-color: transparent;
+    padding: 0px;
+
+    &:hover {
+        border-color: $--border-color-base-hover;
+    }
+    &:disabled {
+        background-color: $--color-text-placeholder;
+        border-color: $--border-color-base;
+    }
+}
+
+#inputContainer[_focus="true"] {
+    border: 2px solid $--color-primary;
+    border-radius: $--border-radius-base;
+    background-color: transparent;
+    padding: 0px;
+}
+
+.ElInput #prefix {
+    border: none;
+    background-color: transparent;
+    margin-left: 2px;
+}
+
+.ElInput #prefix #prefixIcon {
+    border: none;
+    background-color: transparent;
+    min-width: $--icon-size-base;
+    min-height: $--icon-size-base;
+    margin-left: $--padding-large;
+}
+
+
+.ElInput #suffix #suffixIcon{
+    border: none;
+    background-color: transparent;
+    min-width: $--icon-size-base;
+    min-height: $--icon-size-base;
+    margin-right: $--padding-large;
+
+}
+

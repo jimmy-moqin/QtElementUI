@@ -1,7 +1,95 @@
 @import ".\\resource\\qss\\light\\common.scss";
 
 .ElLabel{
-    font-size: $--font-size-base;
+    font-size: $--font-size-large;
     font-family: $--yahei;
-    color: $--color-text-regular
+    color: $--color-text-regular;
+    border-radius: $--border-radius-base;
+    border:none;
 }
+
+.ElLabel[type="default"]{
+    color: $--color-text-regular;
+    background-color: $--color-white;
+    border-radius: $--border-radius-base;
+    padding-left: $--padding-base;
+    padding-right: $--padding-base;
+}
+
+.ElLabel[type="primary"]{
+    color: $--color-white;
+    background-color: $--color-primary;
+    border-radius: $--border-radius-base;
+    padding-left: $--padding-base;
+    padding-right: $--padding-base;
+}
+
+.ElLabel[type="success"]{
+    color: $--color-white;
+    background-color: $--color-success;
+    border-radius: $--border-radius-base;
+    padding-left: $--padding-base;
+    padding-right: $--padding-base;
+}
+
+.ElLabel[type="warning"]{
+    color: $--color-white;
+    background-color: $--color-warning;
+    border-radius: $--border-radius-base;
+    padding-left: $--padding-base;
+    padding-right: $--padding-base;
+}
+
+.ElLabel[type="danger"]{
+    color: $--color-white;
+    background-color: $--color-danger;
+    border-radius: $--border-radius-base;
+    padding-left: $--padding-base;
+    padding-right: $--padding-base;
+}
+
+.ElLabel[type="info"]{
+    color: $--color-white;
+    background-color: $--color-info;
+    border-radius: $--border-radius-base;
+    padding-left: $--padding-base;
+    padding-right: $--padding-base;
+}
+
+.ElLabel[type="default"][plain="true"]{
+    color: $--color-text-regular;
+    background-color: transparent;
+    border : 1px solid $--border-color-base;
+}
+
+.ElLabel[type="primary"][plain="true"]{
+    color: $--color-text-regular;
+    background-color: transparent;
+    border : 1px solid $--color-primary;
+}
+
+.ElLabel[type="success"][plain="true"]{
+    color: $--color-text-regular;
+    background-color: transparent;
+    border : 1px solid $--color-success;
+}
+
+.ElLabel[type="warning"][plain="true"]{
+    color: $--color-text-regular;
+    background-color: transparent;
+    border : 1px solid $--color-warning;
+}
+
+.ElLabel[type="danger"][plain="true"]{
+    color: $--color-text-regular;
+    background-color: transparent;
+    border : 1px solid $--color-danger;
+}
+
+.ElLabel[type="info"][plain="true"]{
+    color: $--color-text-regular;
+    background-color: transparent;
+    border : 1px solid $--color-info;
+}
+
+

@@ -2,9 +2,11 @@ import os
 
 import sass
 from components.common.common_enums import Size, Type
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QColor, QFont, QIcon
-from PyQt5.QtWidgets import QWidget
+from components.elbutton import ElButton
+from components.ellabel import ElLabel
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QColor, QFont, QIcon, QPixmap
+from PyQt5.QtWidgets import QPushButton, QSizePolicy, QWidget
 from ui.Main_ui import Ui_MainWidget
 
 
@@ -13,13 +15,17 @@ class MainWidgetLogic(QWidget, Ui_MainWidget):
     def __init__(self):
         super(MainWidgetLogic, self).__init__()
         self.setupUi(self)
-        
+     
         self.initUI()
         self.ElButtonsUI()
         self.ElListUI()
+        self.ElCatalogUI()
+        self.ElInputUI()
         
-    
+        self.leftCatalog.currentItemChanged.connect(self.linkStackPages)
+
     def initUI(self):
+        
         # 编译resource\qss\light下的scss文件,把所有文件合并成一个再编译
         files = os.listdir("resource\qss\light")
         self.qss = ""
@@ -31,6 +37,14 @@ class MainWidgetLogic(QWidget, Ui_MainWidget):
         self.qss = sass.compile(string=self.qss)
         self.setStyleSheet(self.qss)
         
+    def linkStackPages(self, index):
+        if self.leftCatalog.currentItem().text() == "Button 按钮":
+            self.StackedWidget.setCurrentIndex(0)
+        elif self.leftCatalog.currentItem().text() == "Catalog 目录":
+            self.StackedWidget.setCurrentIndex(1)
+        elif self.leftCatalog.currentItem().text() == "Input 输入框":
+            self.StackedWidget.setCurrentIndex(2)
+
     def ElButtonsUI(self):
         # 默认按钮样式的不同Type
         self.DefaultBtn.setType(Type.DEFAULT)
@@ -222,17 +236,59 @@ class MainWidgetLogic(QWidget, Ui_MainWidget):
         firstItemFont.setFamily("Microsoft YaHei")
         firstItemFont.setPointSize(14)
         firstItemFont.setBold(True)
-        self.leftListWidget.addItem("Basic 基础组件",level="1",first_style=firstItemFont)
-        self.leftListWidget.addItem("Button 按钮",level="2")
-        self.leftListWidget.addItem("Border 边框",level="2")
-        self.leftListWidget.addItem("Color 色彩",level="2")
-        self.leftListWidget.addItem("Container 布局容器",level="2")
-        self.leftListWidget.addItem("Icon 图标",level="2")
-        self.leftListWidget.addItem("Layout 布局",level="2")
-        self.leftListWidget.addItem("Link 链接",level="2")
+        self.leftCatalog.addItem("Basic 基础组件",level="1",first_style=firstItemFont)
+        self.leftCatalog.addItem("Button 按钮",level="2")
+        # self.leftCatalog.addItem("Border 边框",level="2")
+        # self.leftCatalog.addItem("Color 色彩",level="2")
+        # self.leftCatalog.addItem("Container 布局容器",level="2")
+        # self.leftCatalog.addItem("Icon 图标",level="2")
+        # self.leftCatalog.addItem("Layout 布局",level="2")
+        # self.leftCatalog.addItem("Link 链接",level="2")
+        self.leftCatalog.addItem("Navigation 导航",level="1",first_style=firstItemFont)
+        self.leftCatalog.addItem("Catalog 目录",level="2")
+        self.leftCatalog.addItem("Form 表单",level="1",first_style=firstItemFont)
+        self.leftCatalog.addItem("Input 输入框",level="2")
+
+    def ElCatalogUI(self):
+        self.CatalogExample.addItem("这是一级标题",level="1")
+        self.CatalogExample.addItem("这是二级标题_1",level="2")
+        self.CatalogExample.addItem("这是二级标题_2",level="2")
+        self.CatalogExample.addItem("这是二级标题_3",level="2")
+
+    def ElInputUI(self):
+        self.DisabledInput.setDisabled(True)
+        self.ClearableInput.setClearable(True)
+        self.IconInputLeft.setPrefixIcon(QPixmap(":/System/Search.svg"),size=QSize(18,18))
+        self.IconInputLeft.setClearable(True)
+        self.IconInputRight.setSuffixIcon(QPixmap(":/System/Search.svg"))
+
+        btn_search = ElButton()
+        btn_search.setType(Type.PRIMARY)
+        btn_search.isText(True)
+        btn_search.setText("Search")
+        self.ComplexInput_1.setPrefixWidget(btn_search)
+        self.ComplexInput_1.setPrefixWidth(96)
+
+        label_http = ElLabel()
+        label_http.setText("http://")
+        label_http.setType(Type.PRIMARY)
+        self.ComplexInput_2.setPrefixWidget(label_http)
+        self.ComplexInput_2.setPrefixWidth(86)
 
 
-
+        label_https = ElLabel()
+        label_https.setText("https://")
+        label_https.setType(Type.PRIMARY)
+        self.ComplexInput_3.setPrefixWidget(label_https)
+        self.ComplexInput_3.setPrefixWidth(96)
+        label_com = ElLabel()
+        label_com.setText(".com")
+        label_com.setType(Type.PRIMARY)
+        self.ComplexInput_3.setSuffixWidget(label_com)
+        self.ComplexInput_3.setSuffixWidth(78)
+        
+        
+        
     '''Logic Func below'''
     
     def logic_1(self):

@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="System">
+    <file>CircleClose.svg</file>
     <file>Search.svg</file>
     <file>plus.svg</file>
   </qresource>
