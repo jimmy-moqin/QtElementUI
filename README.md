@@ -1,4 +1,5 @@
-# Qt-ElementUI
+## Introduction
+
 [简体中文](README_zh.md)
 
 ## Introduction
@@ -14,7 +15,7 @@ ps: the components are named in the same style as ElementUI, e.g. ElButton, ElIn
 Here are a few of the components that have been done so far
 1. **ElButton**
 
-    <img src=".\resource\img\button_show.png" alt="catalog_show" style="zoom:67%;" />
+    ![button_show](H:\QtElementUI\resource\img\button_show.png)
 
 2. **ElCatalog**
 
@@ -22,7 +23,6 @@ Here are a few of the components that have been done so far
 
 3. **ElInput**
 
-    <img src=".\resource\img\input_show.png" alt="catalog_show" style="zoom:67%;" />
-    
+    ![input_show](H:\QtElementUI\resource\img\input_show.png)
 ## Acknowledgements
 Thanks to zhiyiYo's [PyQt Fluent UI](https://github.com/zhiyiYo/PyQt-Fluent-Widgets) excellent project that gave me inspiration and technical reference to develop this project, please give him Star!
