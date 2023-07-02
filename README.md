@@ -2,6 +2,9 @@
 
 [简体中文](README_zh.md)
 
+## UpDate
+ElTable Component
+
 ## Introduction
 This is a PyQt UI library under development. The interface design is modeled after ElementUI, with the goal of replicating its style and responsiveness as much as possible, while also adding several components commonly used in the C-side.
 ps: the components are named in the same style as ElementUI, e.g. ElButton, ElInput, etc.
