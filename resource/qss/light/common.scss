@@ -113,7 +113,14 @@ $--color-info-dark-7: mix($--color-black, $--color-info, 70%) !default;
 $--color-info-dark-8: mix($--color-black, $--color-info, 80%) !default;
 $--color-info-dark-9: mix($--color-black, $--color-info, 90%) !default;
 
-
+// 填充颜色
+$--fill-color: #f0f2f5;
+$--fill-color-light: #f5f7fa;
+$--fill-color-lighter: #fafafa;
+$--fill-color-extra-light: #fafcff;
+$--fill-color-dark: #ebedf0;
+$--fill-color-darker: #e6e8eb;
+$--fill-color-blank: #ffffff;
 
 // 文本颜色
 /// color|1|Font Color|2
@@ -227,6 +234,7 @@ $--border-radius-zero: 0 !default;
 
 $--border-radius-round: 8px !default;
 
+$--table-raw-height: 2.5em;
 
 // 阴影
 /// boxShadow|1|Shadow|1
@@ -237,8 +245,8 @@ $--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !de
 $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 
 #MainWidget { background-color: #FFFFFF; }
-#scrollArea_2{border:none }
-#scrollArea{border:none }
+.QScrollArea{border:none }
+
 .QScrollBar {
     width: 10px;
     background-color: transparent;

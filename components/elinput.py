@@ -1,17 +1,9 @@
-import os
 
-from PyQt5.QtCore import (QEvent, QPoint, QRect, QRectF, QSize, Qt, QUrl,
-                          pyqtProperty, pyqtSignal)
-from PyQt5.QtGui import (QColor, QDesktopServices, QFont, QFontMetrics, QIcon,
-                         QPainter, QPixmap, QTextOption)
-from PyQt5.QtWidgets import (QAction, QApplication, QFrame, QHBoxLayout,
-                             QLayout, QLineEdit, QListWidget, QListWidgetItem,
-                             QProxyStyle, QPushButton, QRadioButton,
-                             QSizePolicy, QSpacerItem, QStyle,
-                             QStyledItemDelegate, QStyleOptionButton,
-                             QToolButton, QVBoxLayout, QWidget)
+from PyQt5.QtCore import QSize
+from PyQt5.QtGui import QIcon, QPixmap
+from PyQt5.QtWidgets import (QHBoxLayout, QLineEdit, QProxyStyle, QSizePolicy,
+                             QSpacerItem, QStyle, QVBoxLayout, QWidget)
 
-from .common.common_enums import Size, Type
 from .ellabel import ElLabel
 
 

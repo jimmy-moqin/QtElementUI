@@ -1,0 +1,49 @@
+.ElTable{
+    background-color: $--color-white;
+    // alternate-background-color:$--color-danger;
+    color: $--color-text-regular;
+    outline: 0px;
+    border: none;
+    min-height: 5*($--table-raw-height); // 默认5个行高
+    &::item{
+        background-color: transparent;
+        font-size: $--font-size-extra-small;
+        color: $--color-text-regular;
+        height: $--table-raw-height;
+        padding-left: $--padding-base;
+        border-bottom: 1px solid $--border-color-lighter;
+        &:hover{
+            background-color: $--fill-color-light;
+        }
+        &:selected{
+            background-color: $--color-primary-light-9;
+        }
+    }
+}
+
+.QHeaderView{
+    font-size: $--font-size-base;
+    font-weight: bold;
+    border: none;
+    
+    &:hover{
+        background-color: $--fill-color-light;
+    }
+    &:selected{
+        background-color: $--color-primary-light-9;
+    }
+    &::section{
+        padding-left: $--padding-base;
+        border: none;
+        height: 2.5em;
+        background-color: $--color-white;
+        border-bottom: 1px solid $--border-color-lighter;
+    }
+}
+// 当没有数据时，表格的样式
+.ElTable[none="true"]{
+    background-color: $--fill-color-light;
+    min-height: 3*($--table-raw-height); // 默认3个行高
+    border: 1px solid $--border-color-base-hover;
+    border-radius: $--border-radius-base;
+}

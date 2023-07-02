@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1138</width>
-    <height>719</height>
+    <height>708</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,7 +38,7 @@
       <string notr="true">#previewStackedWidget{background-color: rgb(255, 255, 255);}</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="Buttons">
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -930,9 +930,9 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-123</y>
+            <y>0</y>
             <width>844</width>
-            <height>840</height>
+            <height>837</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1157,6 +1157,175 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="Table">
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_3">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>-100</y>
+            <width>844</width>
+            <height>806</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#scrollAreaWidgetContents_2{
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_22">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>20</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Table 表格</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_23">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>用于展示多条结构类似的数据， 可对数据进行排序、筛选、对比或其他自定义操作。</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_24">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>基础表格</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElTable" name="BaseTable">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_25">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>带斑马纹表格</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElTable" name="StripeTable"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_26">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>带边框表格</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElTable" name="BorderTable"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_27">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>空表格骨架屏</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElTable" name="BlankTable"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_28">
+             <property name="font">
+              <font>
+               <family>思源黑体 CN</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>带状态表格</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ElTable" name="StateTable"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -1177,6 +1346,11 @@
    <extends>QWidget</extends>
    <header>components.elinput.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ElTable</class>
+   <extends>QTableWidget</extends>
+   <header>components.eltable.h</header>
   </customwidget>
  </customwidgets>
  <resources>

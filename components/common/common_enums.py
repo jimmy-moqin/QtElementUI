@@ -15,3 +15,10 @@ class Size(Enum):
     DEFAULT = "default"
     LARGE = "large"
     SMALL = "small"
+
+
+class Align(Enum):
+    """ align """
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"

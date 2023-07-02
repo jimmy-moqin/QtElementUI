@@ -1,46 +1,75 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPainter, QPalette
-from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget
+import os
+import sys
 
+from PyQt5 import QtCore, QtGui
 
-class CustomWidget(QWidget):
-    def paintEvent(self, event):
-        # Retrieve the final style information
-        style = self.style()
-        # print style in readable format
-        
-        palette = self.palette()
+app=QtGui.QApplication(sys.argv)
 
-        # Capture the desired style properties
-        background_color = palette.color(QPalette.Background)
-        text_color = palette.color(QPalette.Text)
+class TableModel(QtCore.QAbstractTableModel):
+    def __init__(self):
+        QtCore.QAbstractTableModel.__init__(self)        
+        self.items=['One','Two','Three','Four','Five','Six','Seven']
 
-        # Perform custom painting using the captured style properties
-        painter = QPainter(self)
-        painter.fillRect(self.rect(), background_color)
-        painter.setPen(text_color)
-        painter.drawText(self.rect(), Qt.AlignCenter, "Custom Widget")
+    def rowCount(self, parent=QtCore.QModelIndex()):   
+        return len(self.items)
+    def columnCount(self, index=QtCore.QModelIndex()):
+        return 1
 
-        # Call the base class paintEvent to ensure standard painting is performed
-        super().paintEvent(event)
+    def data(self, index, role):
+        if not index.isValid() or not (0<=index.row()<len(self.items)):
+            return QtCore.QVariant()
 
-# Create the application and main window
-app = QApplication([])
-window = QWidget()
+        item=str(self.items[index.row()])
 
-# Set a style sheet for the main window
-window.setStyleSheet("QWidget { background-color: lightblue; color: white; }")
+        if role==QtCore.Qt.UserRole:
+            return item
+        if role==QtCore.Qt.DisplayRole:
+            return item
+        if role==QtCore.Qt.TextColorRole:
+            return QtCore.QVariant(QtGui.QColor(QtCore.Qt.white))
+        if role == QtCore.Qt.BackgroundRole:
+            if index.row()%2:
+                return QtCore.QVariant(QtGui.QColor("#242424"))
+            else:
+                return QtCore.QVariant(QtGui.QColor(QtCore.Qt.black))
 
-# Create a custom widget
-custom_widget = CustomWidget()
+    def headerData(self, column, orientation, role=QtCore.Qt.DisplayRole):
+        if role!=QtCore.Qt.DisplayRole:   return QtCore.QVariant()
+        if orientation==QtCore.Qt.Horizontal: return QtCore.QVariant('My Column Name') 
 
-# Add the custom widget to the main window layout
-layout = QVBoxLayout()
-layout.addWidget(custom_widget)
-window.setLayout(layout)
+class TableView(QtGui.QTableView):
+    def __init__(self, parent=None):
+        super(TableView, self).__init__(parent)
+        self.horizontalHeader().setResizeMode(QtGui.QHeaderView.Stretch)
+        self.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)        
 
-# Show the main window
-window.show()
+        myModel=TableModel()
+        self.setModel(myModel)      
 
-# Run the application event loop
-app.exec()
+        appStyle="""
+        QTableView
+        {   
+            background-color: black;
+            gridline-color:grey;
+            color: black;
+        }
+        QTableView::item 
+        {   
+            color: white;         
+        }
+        QTableView::item:hover
+        {   
+            color: black;
+            background: #ffaa00;            
+        }
+        QTableView::item:focus
+        {   
+            color: black;
+            background: #0063cd;            
+        }        
+        """
+        self.setStyleSheet(appStyle)
+
+view=TableView()
+view.show()   
+sys.exit(app.exec_())

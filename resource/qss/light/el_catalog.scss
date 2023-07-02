@@ -14,9 +14,7 @@
         height: 2.5em;
         border-radius: $--border-radius-round;
         padding-left: $--padding-large;
-        &:hover{
-            color:$--color-primary;
-        }
+        
         &:selected {
             color: $--color-primary;
             background-color: $--color-primary-light-9;
